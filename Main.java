@@ -19,5 +19,7 @@ public class Main {
         System.out.println(one);
         System.out.println(two);
         System.out.println(three);
+
+        System.out.println("Number of Person objects: "+Person.getNumPersons());
     }
 }

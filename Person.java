@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
 public class Person {
     private String name;
     private int age;
+    private static int numPersons = 0;
 
     public Person(){
         name = "John";
         age = 21;
+        numPersons++;
     }
 
     public Person(String name, int age){
@@ -14,15 +18,29 @@ public class Person {
         } else {
             this.age = 0;
         }
+        numPersons++;
     }
 
     public String getName(){
         return name;
     }
 
+    public static int getNumPersons(){
+        return numPersons;
+    }
+
     public void setName(String name){
         this.name = name;
     }
+    /*&public void setName(String name){
+        Scanner scanner = new Scanner(System.in);
+        String newName;
+        System.out.println("Please enter your name: ");
+        newName = scanner.next();
+        this.name = newName;
+    } */
+
+    // setName("Bob");
 
     public int getAge(){
         return age;
